@@ -1,40 +1,62 @@
-⚡ NeuroForge AI Lab
-Plataforma educativa interactiva para aprender, visualizar y experimentar con inteligencia artificial y redes neuronales.
+# ⚡ NeuroForge AI Lab
 
-NeuroForge integra un simulador visual en el navegador con una API de IA en Python para entrenar modelos, realizar predicciones y analizar su rendimiento.
+Plataforma educativa interactiva para aprender, visualizar y experimentar con **inteligencia artificial y redes neuronales**.
 
-✨ Mejoras incorporadas
-Arquitectura separada entre frontend y backend.
-API de IA con FastAPI.
-Modelo de clasificación con scikit-learn.
-Entrenamiento automático y manual.
-Predicciones en tiempo real.
-Gráficas de pérdida y precisión.
-Visualización de la frontera de decisión.
-Datasets XOR, círculo, espiral y lunas.
-Configuración de capas, neuronas y tasa de aprendizaje.
-Funciones ReLU, Leaky ReLU, Sigmoid, Tanh y ELU.
-Métricas de gradientes y neuronas muertas.
-Validación de datos.
-Manejo de errores de conexión.
-Diseño adaptable para móviles.
-Documentación automática mediante Swagger.
-Código organizado y preparado para futuras extensiones.
-🧠 Tecnologías
-Frontend
-HTML5
-CSS3
-JavaScript
-Canvas API
-Fetch API
-Backend
-Python
-FastAPI
-Uvicorn
-scikit-learn
-NumPy
-Pydantic
-📂 Estructura del proyecto
+NeuroForge integra un simulador visual en el navegador con una API de IA desarrollada en Python.
+
+## ✨ Características
+
+- Simulación visual de redes neuronales.
+- Entrenamiento automático y paso a paso.
+- Predicciones mediante una IA real.
+- Configuración de capas y neuronas.
+- Ajuste de la tasa de aprendizaje.
+- Funciones de activación:
+  - ReLU
+  - Leaky ReLU
+  - Sigmoid
+  - Tanh
+  - ELU
+- Datasets:
+  - XOR
+  - Círculo 2D
+  - Espiral 2D
+  - Lunas 2D
+- Métricas en tiempo real:
+  - Loss
+  - Precisión
+  - Gradiente máximo
+  - Neuronas muertas
+  - Vanishing gradients
+  - Exploding gradients
+- Predicciones con nivel de confianza.
+- Gráficas de pérdida y precisión.
+- Visualización de la frontera de decisión.
+- Diseño adaptable para dispositivos móviles.
+- Documentación automática de la API con Swagger.
+
+## 🧠 Tecnologías
+
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- Canvas API
+- Fetch API
+
+### Backend
+
+- Python
+- FastAPI
+- Uvicorn
+- scikit-learn
+- NumPy
+- Pydantic
+
+## 📂 Estructura del proyecto
+
+```text
 neuroforge-ai-lab/
 ├── frontend/
 │   ├── index.html
@@ -55,13 +77,13 @@ Clona el repositorio:
 git clone https://github.com/Edmundo988/neuroforge-ai-lab.git
 cd neuroforge-ai-lab
 🐍 Configuración del backend
-Entra en la carpeta:
+Entra en la carpeta del backend:
 
 cd backend
 Crea un entorno virtual:
 
 python -m venv .venv
-Actívalo.
+Activa el entorno virtual.
 
 Windows
 .venv\Scripts\activate
@@ -80,22 +102,24 @@ Documentación interactiva:
 
 http://127.0.0.1:8000/docs
 🌐 Ejecutar el frontend
-Abre frontend/index.html en el navegador o utiliza Live Server en Visual Studio Code.
+Abre el archivo:
 
-El backend debe estar activo para utilizar las funciones de IA.
+frontend/index.html
+También puedes utilizar la extensión Live Server de Visual Studio Code.
 
-🔌 API
-Estado del servidor
+El backend debe estar activo para utilizar las funciones de inteligencia artificial.
+
+🔌 Endpoints de la API
+Comprobar el estado del servidor
 GET /
 Entrenar el modelo
 POST /train
-Parámetros:
+Ejemplo:
 
-epochs=10
-dataset=moons
+POST /train?epochs=10&dataset=moons
 Realizar una predicción
 POST /predict
-Ejemplo:
+Datos de ejemplo:
 
 {
   "x": 0.5,
@@ -108,30 +132,30 @@ Respuesta:
   "probabilities": [0.18, 0.82],
   "confidence": 0.82
 }
-Obtener métricas
+Consultar métricas
 GET /metrics
-🎮 Uso
-Selecciona el dataset.
+🎮 Cómo utilizar NeuroForge
+Selecciona un dataset.
 Configura las capas ocultas.
 Define el número de neuronas.
 Ajusta la tasa de aprendizaje.
-Elige la función de activación.
+Elige una función de activación.
 Presiona Entrenar IA.
 Observa la pérdida y la precisión.
-Prueba nuevos puntos para obtener predicciones.
-Analiza la frontera de decisión.
+Prueba nuevos puntos.
+Analiza las predicciones y la frontera de decisión.
 📊 Métricas disponibles
 Pérdida MSE.
-Precisión.
+Precisión del modelo.
 Confianza de la predicción.
 Gradiente máximo.
 Neuronas muertas.
 Vanishing gradients.
 Exploding gradients.
-Tiempo de entrenamiento.
 Número de épocas.
-📚 Objetivos educativos
-NeuroForge permite comprender:
+Tiempo de entrenamiento.
+📚 Conceptos educativos
+NeuroForge permite estudiar:
 
 Inteligencia artificial.
 Aprendizaje automático.
@@ -147,27 +171,28 @@ Evaluación de modelos.
 🛡️ Seguridad
 Antes de utilizar el proyecto en producción, se recomienda:
 
-Restringir CORS.
+Restringir los orígenes permitidos en CORS.
 Validar todas las entradas.
 Añadir autenticación.
 Aplicar límites de solicitudes.
-No almacenar datos sensibles.
 Proteger los modelos guardados.
-Configurar variables de entorno.
+Utilizar variables de entorno.
+Evitar almacenar información sensible.
 🚧 Próximas mejoras
 Asistente educativo conversacional.
 Soporte para TensorFlow y PyTorch.
+Importación de archivos CSV.
 Exportación de modelos.
-Importación de datasets CSV.
-Sistema de usuarios.
 Historial de entrenamientos.
-Modo oscuro y claro.
-Traducción a varios idiomas.
+Sistema de usuarios.
 Despliegue con Docker.
 Publicación en la nube.
+Soporte para más idiomas.
 🤝 Contribuciones
-Realiza un fork.
-Crea una rama:
+Las contribuciones son bienvenidas.
+
+Realiza un fork del repositorio.
+Crea una nueva rama:
 git checkout -b nueva-funcionalidad
 Realiza tus cambios.
 Confirma los cambios:
